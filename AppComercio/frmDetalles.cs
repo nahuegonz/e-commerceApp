@@ -50,6 +50,7 @@ namespace AppComercio
                     decimal numeroTruncado = Math.Truncate(ArticuloSeleccionado.Precio * 100) / 100;
                     lblPrecio.Text = numeroTruncado.ToString();
                     lblDescripcion.Text = ArticuloSeleccionado.Descripcion;
+                    espaciarLabel(lblDescripcion.Text, 30, 20);
                     lblCategoria.Text = ArticuloSeleccionado.Categoria.Descripcion;
                     lblMarca.Text = ArticuloSeleccionado.Marca.ToString();
                     lblCategoria.Text = ArticuloSeleccionado.Categoria.ToString();
@@ -67,6 +68,35 @@ namespace AppComercio
 
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void espaciarLabel(string texto, int longitudMaximaPorLinea, int longitudMinimaPorLinea)
+        {
+            StringBuilder sb = new StringBuilder();
+            int index = 0;
+
+            while (index < texto.Length)
+            {
+                int siguienteLongitud = Math.Min(longitudMaximaPorLinea, texto.Length - index);
+                string espacio = texto.Substring(index, siguienteLongitud);
+
+                int ultimoEspacio = espacio.LastIndexOf(' ');
+
+                if (ultimoEspacio != -1 && ultimoEspacio < siguienteLongitud - 1 && ultimoEspacio > longitudMinimaPorLinea)
+                {
+                    sb.Append(espacio.Substring(0, ultimoEspacio));
+                    sb.AppendLine();
+                    index += ultimoEspacio + 1;
+                }
+                else
+                {
+                    sb.Append(espacio);
+                    sb.AppendLine();
+                    index += siguienteLongitud;
+                }
+            }
+
+            lblDescripcion.Text = sb.ToString();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

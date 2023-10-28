@@ -29,6 +29,7 @@ namespace AppComercio
             try
             {
                 cargar();
+                cargarFiltros();
 
             }
             catch (Exception)
@@ -45,12 +46,14 @@ namespace AppComercio
 
         private void cargar()
         {
+                obtenerArticulos();
+        }
+        private void cargarFiltros()
+        {
             NegocioCategoria negocioCategoria = new NegocioCategoria();
             NegocioMarca negocioMarca = new NegocioMarca();
             try
             {
-                obtenerArticulos();
-                //cargarImagen(ListaArticulo[0].UrlImagen);
                 cboCategoria.DataSource = negocioCategoria.listar();
                 cboMarca.DataSource = negocioMarca.listar();
                 cboCategoria.SelectedIndex = -1;
@@ -58,8 +61,10 @@ namespace AppComercio
             }
             catch (Exception ex)
             {
+
                 MessageBox.Show(ex.ToString());
             }
+            
         }
         private void ocultarColumnas()
         {

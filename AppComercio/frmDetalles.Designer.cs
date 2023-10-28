@@ -104,7 +104,7 @@
             this.lblDescripcion.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(353, 113);
+            this.lblDescripcion.Location = new System.Drawing.Point(353, 95);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(17, 18);
             this.lblDescripcion.TabIndex = 5;
@@ -126,7 +126,7 @@
             this.lblCategoria.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(457, 202);
+            this.lblCategoria.Location = new System.Drawing.Point(437, 202);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(17, 18);
             this.lblCategoria.TabIndex = 7;
@@ -148,7 +148,7 @@
             this.lblMarca.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblMarca.AutoSize = true;
             this.lblMarca.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarca.Location = new System.Drawing.Point(457, 237);
+            this.lblMarca.Location = new System.Drawing.Point(437, 237);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(17, 18);
             this.lblMarca.TabIndex = 9;
@@ -170,7 +170,7 @@
             this.lblCodigoArt.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblCodigoArt.AutoSize = true;
             this.lblCodigoArt.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoArt.Location = new System.Drawing.Point(457, 269);
+            this.lblCodigoArt.Location = new System.Drawing.Point(437, 269);
             this.lblCodigoArt.Name = "lblCodigoArt";
             this.lblCodigoArt.Size = new System.Drawing.Size(17, 18);
             this.lblCodigoArt.TabIndex = 11;

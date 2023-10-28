@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Reflection.Emit;
 
 namespace AppComercio
 {
@@ -79,7 +80,7 @@ namespace AppComercio
             
             try
             {
-                if (txtbNombre.Text != "" && txtbCodigo.Text != "")
+                if (validarCampos())
                 {
                     if (Articulo == null)
                         Articulo = new Articulo();
@@ -88,9 +89,9 @@ namespace AppComercio
                     Articulo.Descripcion = txtbDescripcion.Text;
                     Articulo.Marca = (Marca)cboMarca.SelectedItem;
                     Articulo.Categoria = (Categoria)cboCategoria.SelectedItem;
-                    if (!(Articulo.UrlImagen is null))
-                        Articulo.UrlImagen = txtbImagen.Text;
-                    if (!(Articulo.Precio == 0))
+                    Articulo.UrlImagen = txtbImagen.Text;
+                    Articulo.Precio = 0;
+                    if (txtbPrecio.Text != null && txtbPrecio.Text != "")
                         Articulo.Precio = Convert.ToDecimal(txtbPrecio.Text);
                     Articulo.Codigo = txtbCodigo.Text;
 
@@ -122,8 +123,7 @@ namespace AppComercio
                     }
                     Close();
                 }
-                else
-                    MessageBox.Show("Ingrese un Nombre y un Código, por favor.");
+                
             }
             catch (Exception ex)
             {
@@ -131,6 +131,19 @@ namespace AppComercio
                 throw ex;
             }
         }
+        private bool validarCampos()
+        {
+            if (txtbNombre.Text != "" && cboCategoria.SelectedItem != null && cboMarca.SelectedItem != null)
+            {
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Los campos Nombre, Marca y Categoría son obligatorios.");
+                return false;
+            }
+        }
+
 
         private void txtbPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -166,6 +179,11 @@ namespace AppComercio
                 txtbImagen.Text = archivo.FileName;
                 cargarImagen(archivo.FileName);
             }
+        }
+
+        private void txtbImagen_DoubleClick(object sender, EventArgs e)
+        {
+            txtbImagen.SelectAll();
         }
     }
 }

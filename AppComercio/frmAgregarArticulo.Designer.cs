@@ -127,9 +127,12 @@
             // cboMarca
             // 
             this.cboMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboMarca.BackColor = System.Drawing.SystemColors.Window;
             this.cboMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboMarca.FormattingEnabled = true;
             this.cboMarca.Location = new System.Drawing.Point(106, 159);
+            this.cboMarca.MaxLength = 15;
             this.cboMarca.Name = "cboMarca";
             this.cboMarca.Size = new System.Drawing.Size(189, 21);
             this.cboMarca.TabIndex = 7;
@@ -140,6 +143,7 @@
             this.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCategoria.FormattingEnabled = true;
             this.cboCategoria.Location = new System.Drawing.Point(106, 207);
+            this.cboCategoria.MaxLength = 15;
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(189, 21);
             this.cboCategoria.TabIndex = 8;
@@ -149,6 +153,7 @@
             this.txtbNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtbNombre.Location = new System.Drawing.Point(106, 23);
+            this.txtbNombre.MaxLength = 20;
             this.txtbNombre.Name = "txtbNombre";
             this.txtbNombre.Size = new System.Drawing.Size(189, 20);
             this.txtbNombre.TabIndex = 9;
@@ -158,6 +163,7 @@
             this.txtbDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtbDescripcion.Location = new System.Drawing.Point(106, 66);
+            this.txtbDescripcion.MaxLength = 150;
             this.txtbDescripcion.Multiline = true;
             this.txtbDescripcion.Name = "txtbDescripcion";
             this.txtbDescripcion.Size = new System.Drawing.Size(189, 70);
@@ -168,9 +174,11 @@
             this.txtbImagen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtbImagen.Location = new System.Drawing.Point(106, 271);
+            this.txtbImagen.MaxLength = 200;
             this.txtbImagen.Name = "txtbImagen";
             this.txtbImagen.Size = new System.Drawing.Size(150, 20);
             this.txtbImagen.TabIndex = 11;
+            this.txtbImagen.DoubleClick += new System.EventHandler(this.txtbImagen_DoubleClick);
             this.txtbImagen.Leave += new System.EventHandler(this.txtbImagen_Leave);
             // 
             // btnImagenLocal
@@ -189,6 +197,7 @@
             this.txtbPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtbPrecio.Location = new System.Drawing.Point(106, 320);
+            this.txtbPrecio.MaxLength = 13;
             this.txtbPrecio.Name = "txtbPrecio";
             this.txtbPrecio.Size = new System.Drawing.Size(189, 20);
             this.txtbPrecio.TabIndex = 13;
@@ -199,6 +208,7 @@
             this.txtbCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtbCodigo.Location = new System.Drawing.Point(106, 369);
+            this.txtbCodigo.MaxLength = 15;
             this.txtbCodigo.Name = "txtbCodigo";
             this.txtbCodigo.Size = new System.Drawing.Size(189, 20);
             this.txtbCodigo.TabIndex = 14;
